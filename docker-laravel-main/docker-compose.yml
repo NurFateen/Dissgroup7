@@ -1,0 +1,38 @@
+services:
+  laravel:
+    build:
+    image: 
+    networks:
+
+    volumes:
+
+    ports:
+
+    working_dir: 
+  redis:
+    image: redis:alpine
+    networks:
+
+    volumes:
+
+  mysqldb:
+    image: 
+    environment:
+      MYSQL_ROOT_PASSWORD: somerandomrootpassword
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laraveluser
+      MYSQL_PASSWORD: somerandompassword
+    ports:
+
+    networks:
+
+    volumes:
+
+networks:
+  sysops:
+    driver: bridge
+volumes:
+  mysqldbdata:
+    driver: local
+  redisdata:
+    driver: local
